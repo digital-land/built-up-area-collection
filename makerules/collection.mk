@@ -43,8 +43,8 @@ COLLECTION_INDEX=\
 	$(COLLECTION_DIR)/resource.csv
 
 init::
-	curl -qfsL '$(DATASTORE_URL)$(REPOSITORY)/$(COLLECTION_DIR)log.csv' > $(COLLECTION_DIR)log.csv
-	curl -qfsL '$(DATASTORE_URL)$(REPOSITORY)/$(COLLECTION_DIR)resource.csv' > $(COLLECTION_DIR)resource.csv
+	#curl -qfsL '$(DATASTORE_URL)$(REPOSITORY)/$(COLLECTION_DIR)log.csv' > $(COLLECTION_DIR)log.csv
+	#curl -qfsL '$(DATASTORE_URL)$(REPOSITORY)/$(COLLECTION_DIR)resource.csv' > $(COLLECTION_DIR)resource.csv
 
 first-pass:: collect
 
@@ -61,7 +61,7 @@ clobber-today::
 	rm -rf $(LOG_FILES_TODAY) $(COLLECTION_INDEX)
 
 makerules::
-	curl -qfsL '$(SOURCE_URL)/makerules/main/collection.mk' > makerules/collection.mk
+	#curl -qfsL '$(SOURCE_URL)/makerules/main/collection.mk' > makerules/collection.mk
 
 commit-collection::
 	git add collection/log
